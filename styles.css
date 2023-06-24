@@ -1,0 +1,136 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --dark-cyan: hsl(185, 75%, 39%);
+  --dark-blue: hsl(229, 23%, 23%);
+  --grayish-blue: hsl(227, 10%, 46%);
+  --dark-gray: hsl(0, 0%, 59%);
+  --default-font-size: 1.8rem;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-size: var(--default-font-size);
+  font-family: "Kumbh Sans", sans-serif;
+  padding: 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  position: relative;
+  background-color: var(--dark-cyan);
+}
+
+body::before,
+body::after {
+  content: "";
+  position: absolute;
+  width: 50%;
+  height: 50%;
+  background-repeat: no-repeat;
+}
+
+body::before {
+  top: 0;
+  left: 0;
+  background-position: bottom right;
+  background-image: url("./images/bg-pattern-top.svg");
+}
+
+body::after {
+  bottom: 0;
+  right: 0;
+  background-position: top left;
+  background-image: url("./images/bg-pattern-bottom.svg");
+}
+
+.profile-card {
+  z-index: 2;
+  width: 40rem;
+  border-radius: 2rem;
+  overflow: hidden;
+  position: relative;
+}
+
+.profile-card__top {
+  height: 15rem;
+  width: inherit;
+  background-image: url("./images/bg-pattern-card.svg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.profile-card__details {
+  text-align: center;
+  background-color: #fff;
+  padding: 8rem 2rem 2rem;
+  position: relative;
+  border-bottom: 2px solid hsla(0, 0%, 59%, 0.2);
+}
+
+.profile-card__image {
+  width: 12rem;
+  height: 12rem;
+  border-radius: 50%;
+  border: 6px solid #fff;
+  position: absolute;
+  left: 50%;
+  top: -6rem;
+  transform: translateX(-50%);
+}
+
+.profile-card__name {
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: var(--dark-blue);
+}
+
+.profile-card__age {
+  font-weight: 400;
+  margin-inline-start: 0.5rem;
+  color: var(--grayish-blue);
+}
+
+.profile-card__city {
+  margin: 1rem 0 0;
+  font-size: 1.4rem;
+  color: var(--grayish-blue);
+}
+
+.profile-card__stats {
+  display: flex;
+  gap: 6rem;
+  padding: 2rem;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  background-color: #fff;
+}
+
+.profile-card__stats-count {
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: var(--dark-blue);
+}
+
+.profile-card__stats-label {
+  font-weight: 400;
+  color: var(--grayish-blue);
+  margin: 0.5rem 0 0;
+  font-size: 1.2rem;
+  letter-spacing: 0.1rem;
+}
+
+@media (max-width: 380px) {
+  html {
+    font-size: 55%;
+  }
+}
