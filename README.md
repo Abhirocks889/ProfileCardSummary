@@ -30,7 +30,7 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [ResultsSummaryLive](https://abhirocks889.github.io/ProfileCardSummary/)
+- Solution URL: [ProfileCardSummaryLive](https://abhirocks889.github.io/ProfileCardSummary/)
 
 ### Built with
 
